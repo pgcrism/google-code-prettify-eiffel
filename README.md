@@ -29,7 +29,7 @@ This plugin adds syntax highlighting for the [Eiffel](http://en.wikipedia.org/wi
 2. Initialize the prettify module by calling 'prettyPrint()'
 	- e.g: \<body onload="prettyPrint()"\>
 
-3. Trigger pretty printing in your <pre> nodes
+3. Trigger pretty printing in your \<pre\> nodes
 	- e.g: \<pre class="prettyprint lang-eiffel"\>
 	- or with line numbering: \<pre class="prettyprint lang-eiffel linenums"\>
     
