@@ -46,41 +46,30 @@ An entire class with numbered lines.
 <pre class="prettyprint lang-eiffel linenums">
 note
 	description: "[
-				APPLICATION implements the "Hello World" service.
+				HELLO_APPLICATION implements the "Hello World" service.
 
 				It inherits from WSF_DEFAULT_SERVICE to get default EWF connector ready
-				only `execute' needs to be implemented.
-
+				HELLO_APPLICATION_EXECUTION contains the request execution implementation.
 			]"
 
 class
 	HELLO_APPLICATION
 
 inherit
-	WSF_RESPONSE_SERVICE
+	WSF_DEFAULT_SERVICE [HELLO_APPLICATION_EXECUTION]
 
 create
 	make_and_launch
 
 feature {NONE} -- Initialization
 
-	make_and_launch
-		local
-			launcher: WSF_DEFAULT_SERVICE_LAUNCHER
-			opts: detachable WSF_SERVICE_LAUNCHER_OPTIONS
+	initialize
+			-- Initialize current service.
 		do
-			--| Uncomment the following line, to read options from "ewf.ini" configuration file
-			--	create {WSF_SERVICE_LAUNCHER_OPTIONS_FROM_INI} opts.make_from_file ("ewf.ini")
-
-			create launcher.make_and_launch (Current, opts)
-		end
-
-feature {NONE} -- Initialization
-
-	response (req: WSF_REQUEST): WSF_PAGE_RESPONSE
-		do
-			create Result.make
-			Result.put_string ("Hello World")
+				-- Specific to `standalone' connector (the EiffelWeb server).
+				-- See `{WSF_STANDALONE_SERVICE_LAUNCHER}.initialize` .
+ 			set_service_option ("port", 9090)
+			import_service_options (create {WSF_SERVICE_LAUNCHER_OPTIONS_FROM_INI}.make_from_file ("server.ini"))
 		end
 
 end

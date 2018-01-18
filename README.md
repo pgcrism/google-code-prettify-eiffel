@@ -5,7 +5,7 @@
 [Google-code-prettify] (https://code.google.com/p/google-code-prettify/) is 
 a Javascript module and CSS file that allows syntax highlighting of source code snippets in an html page.
 
-This plugin adds syntax highlighting for the [Eiffel](http://en.wikipedia.org/wiki/Eiffel_\(programming_language\)) language.
+This plugin adds syntax highlighting for the [Eiffel](http://en.wikipedia.org/wiki/Eiffel_\(programming_language\)) language (see [eiffel.org](https://www.eiffel.org/)).
 
 *status*: beta
 
