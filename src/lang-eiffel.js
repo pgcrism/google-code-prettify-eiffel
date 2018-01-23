@@ -1,4 +1,4 @@
-// Copyright (C) 2013 Paul G. Crismer
+// Copyright (C) 2018 Paul G. Crismer, Jocelyn Fiat
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
+// Maintainer [2018-01-18]: Jocelyn Fiat.
 
 
 /**
@@ -58,7 +60,7 @@ PR['registerLangHandler'](
 			/**
 			 * Keywords
 			 */
-			[PR['PR_KEYWORD'], /^(?:across|agent|alias|all|and|as|assign|attached|attribute|check|class|convert|create|Current|debug|deferred|detachable|do|else|elseif|end|ensure|expanded|export|external|False|feature|from|frozen|if|implies|inherit|indexing|inspect|invariant|like|local|loop|not|note|obsolete|old|once|only|or|Precursor|redefine|reference|rename|require|rescue|Result|retry|select|separate|then|True|TUPLE|undefine|until|variant|Void|when|xor)\b/i, null],
+			[PR['PR_KEYWORD'], /^(?:across|agent|alias|all|and|as|assign|attached|attribute|check|class|convert|create|Current|debug|deferred|detachable|do|else|elseif|end|ensure|expanded|export|external|False|feature|from|frozen|if|implies|inherit|indexing|inspect|invariant|like|local|loop|not|note|obsolete|old|once|only|or|Precursor|redefine|reference|rename|require|rescue|Result|retry|select|separate|some|then|True|TUPLE|undefine|until|variant|Void|when|xor)\b/i, null],
 
 			/*
 			*  Eiffel specific
